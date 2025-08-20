@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: '3.x'
       - name: Run Hello World
-        run: python hello_thonny.py
+        run: python hello_world.py
