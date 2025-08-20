@@ -1,15 +1,16 @@
 name: Run Python Hello World
 
-on: [push]
+on:
+  push:
+  workflow_dispatch:  # <— ermöglicht „Run workflow“ im Actions-Tab
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
       - name: Run Hello World
-        run: python hello_world.py
+        run: python hello_thonny.py
